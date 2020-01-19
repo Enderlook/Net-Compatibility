@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Enderlook.NetStandard21to20Compatiblity</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>0.0.0</Version>
+    <Authors>Enderlook</Authors>
+    <Company>Enderlook</Company>
+    <Description>Add some features of Net Standard 2.1 into Net Standard 2.0.
+https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.1_diff.md</Description>
+    <RepositoryUrl>https://github.com/Enderlook/Net-Standard-2.1-to-2.0-Compatibility</RepositoryUrl>
+    <PackageId>Enderlook.NetStandard21to20Compatiblity</PackageId>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Enderlook.NetStandard21to20Compatiblity</AssemblyName>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+</Project>

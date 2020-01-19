@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Enderlook.NetStandard21to20Compatiblity</RootNamespace>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Enderlook</Authors>
     <Company>Enderlook</Company>
     <Description>Add some features of Net Standard 2.1 into Net Standard 2.0.

@@ -5,7 +5,7 @@ namespace System
     /// <summary>
     /// Extension methods for Span{T}, Memory{T}, and friends.
     /// </summary>
-    public static class MemoryExtensions
+    public static class MemoryExtensions2
     {
         /// <summary>
         /// Sorts the elements in the entire <see cref="Span{T}" /> using the <see cref="IComparable{T}" /> implementation

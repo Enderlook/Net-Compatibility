@@ -16,7 +16,7 @@ namespace System
         /// <exception cref="InvalidOperationException">
         /// One or more elements in <paramref name="span"/> do not implement the <see cref="IComparable{T}" /> interface.
         /// </exception>
-        public static void Sort<T>(this Span<T> span) => span.Sort((IComparer<T>)null);
+        public static void Sort<T>(this Span<T> span) => span.Sort(Comparer<T>.Default);
 
         /// <summary>
         /// Sorts the elements in the entire <see cref="Span{T}" /> using the <typeparamref name="TComparer" />.
@@ -76,7 +76,7 @@ namespace System
         /// <exception cref="InvalidOperationException">
         /// One or more elements in <paramref name="keys"/> do not implement the <see cref="IComparable{T}" /> interface.
         /// </exception>
-        public static void Sort<TKey, TValue>(this Span<TKey> keys, Span<TValue> items) => keys.Sort(items, (IComparer<TKey>)null);
+        public static void Sort<TKey, TValue>(this Span<TKey> keys, Span<TValue> items) => keys.Sort(items, Comparer<TKey>.Default);
 
         /// <summary>
         /// Sorts a pair of spans (one containing the keys and the other containing the corresponding items)

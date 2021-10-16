@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace></RootNamespace>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>0.6.1</Version>
+    <Version>0.6.2</Version>
     <Authors>Enderlook</Authors>
     <Company>Enderlook</Company>
     <Description>Add some features of future versions of Net into Net Standard 2.0.</Description>

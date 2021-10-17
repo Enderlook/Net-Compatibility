@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <RootNamespace></RootNamespace>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>0.6.2</Version>
+    <Version>0.6.3</Version>
     <Authors>Enderlook</Authors>
     <Company>Enderlook</Company>
-    <Description>Add some features of future versions of Net into Net Standard 2.0.</Description>
+    <Description>Add some features of future versions of Net into Net Standard 2.0 and Net Standard 2.1.</Description>
     <RepositoryUrl>https://github.com/Enderlook/Net-Future</RepositoryUrl>
     <PackageId>Enderlook.Compatibility</PackageId>
     <OutputType>Library</OutputType>
@@ -22,8 +22,12 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.Memory" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
   </ItemGroup>
 
 </Project>

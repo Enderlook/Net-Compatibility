@@ -4,6 +4,7 @@
     {
         public static bool TryDequeue<T>(this Queue<T> source, out T result)
         {
+#if NETSTANDARD2_0
             if (source.Count > 0)
             {
                 result = source.Dequeue();
@@ -11,10 +12,14 @@
             }
             result = default;
             return false;
+#else
+            return source.TryDequeue(out result);
+#endif
         }
 
         public static bool TryPeek<T>(this Queue<T> source, out T result)
         {
+#if NETSTANDARD2_0
             if (source.Count > 0)
             {
                 result = source.Peek();
@@ -23,6 +28,9 @@
 
             result = default;
             return false;
+#else
+            return source.TryPeek(out result);
+#endif
         }
     }
 }
